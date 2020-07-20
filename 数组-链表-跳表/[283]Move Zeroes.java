@@ -38,8 +38,8 @@ class Solution {
             if(nums[i] != 0){
                 nums[pos] = nums[i];
                 //检查pos至i路段是否含连续个零,如包含这不相等,则替换nums[pos] num[i]，
-                // 上一行，已经将num[i]赋值给nums[pos], 在该情况下nums[pos]=0，故nums[i] =0即可完成交换
-                if(pos != i){
+                // 如果pos与i不想等，那么num[pos]到num[i]之间都是0
+                if(pos < i){
                     nums[i] =0;
                 }
                 pos ++;
