@@ -32,16 +32,13 @@ class Solution {
 ////                nums[i] = 0;
 ////            }
 ////        }
-        //一次循环，双指针，检测到指针不相等，快慢指针交换值
+        //一次循环，快速排序思想，非0放左边，0放右边
         int pos =  0;
         for (int i=0;i<nums.length;i++){
             if(nums[i] != 0){
-                nums[pos] = nums[i];
-                //检查pos至i路段是否含连续个零,如包含这不相等,则替换nums[pos] num[i]，
-                // 如果pos与i不想等，那么num[pos]到num[i]之间都是0
-                if(pos < i){
-                    nums[i] =0;
-                }
+                int temp = nums[i];
+                nums[i] = nums[pos];
+                nums[pos] = temp;
                 pos ++;
             }
         }
