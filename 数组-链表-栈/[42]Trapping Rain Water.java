@@ -41,7 +41,7 @@ class Solution {
 //      return area;
 
 
-        //数组,当前元素i接水的高度，左边界left为数组[0,i-1]高度Max，右边界right为数组[i+1，nums.length-1]高度Max
+        //数组,当前元素i接水的高度，枚举左右边界max，左边界left为数组[0,i-1]高度Max，右边界right为数组[i+1，nums.length-1]高度Max
         //由于是逐个元素遍历，故宽度是1
         //改进，增加leftMax数组和rightMax数组缓存当前元素的leftMax及rightMax
 //        int area = 0;
