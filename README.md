@@ -37,6 +37,28 @@
 
 分析 Queue 和 Priority Queue 的源码:
 https://www.cnblogs.com/Elliott-Su-Faith-change-our-life/p/7472265.html
+递归代码模板
+// Java
+public void recur(int level, int param) { 
+
+
+  // terminator 
+  if (level > MAX_LEVEL) { 
+    // process result 
+    return; 
+  }
+
+
+  // process current logic 
+  process(level, param); 
+
+
+  // drill down 
+  recur( level: level + 1, newParam); 
+
+
+  // restore current status 
+  }
 
 
 
