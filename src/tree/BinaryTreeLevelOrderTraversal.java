@@ -23,17 +23,11 @@ package tree;//给你一个二叉树，请你返回其按 层序遍历 得到的
 // Related Topics 树 广度优先搜索 
 // 👍 613 👎 0
 
-/**
- * Created by IntelliJ IDEA.
- * [102]Binary Tree Level Order Traversal
- * @author : huangdewei
- * Date: 20200907
- * To change this template use File | Settings | File Templates.
- */
+
 //leetcode submit region begin(Prohibit modification and deletion)
 
 
-import commont.TreeNode;
+import common.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -48,6 +42,13 @@ import java.util.List;
  *     TreeNode right;
  *     TreeNode(int x) { val = x; }
  * }
+ */
+/**
+ * Created by IntelliJ IDEA.
+ * [102]Binary Tree Level Order Traversal
+ * @author : huangdewei
+ * Date: 20200907
+ * To change this template use File | Settings | File Templates.
  */
 class BinaryTreeLevelOrderTraversal     {
 //    public List<List<Integer>> levelOrder(TreeNode root) {

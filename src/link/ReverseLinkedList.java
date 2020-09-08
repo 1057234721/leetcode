@@ -21,7 +21,7 @@ package link;//反转一个单链表。
  * }
  */
 
-import commont.ListNode;
+import common.ListNode;
 
 /**
  * Created by IntelliJ IDEA.

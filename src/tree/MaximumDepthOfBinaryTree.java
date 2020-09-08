@@ -20,9 +20,7 @@ package tree;//给定一个二叉树，找出其最大深度。
 
 //leetcode submit region begin(Prohibit modification and deletion)
 
-import commont.TreeNode;
-
-import java.util.Map;
+import common.TreeNode;
 
 /**
  * Definition for a binary tree node.

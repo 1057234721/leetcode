@@ -28,7 +28,7 @@ package tree;//翻转一棵二叉树。
 
 //leetcode submit region begin(Prohibit modification and deletion)
 
-import commont.TreeNode;
+import common.TreeNode;
 
 import java.util.Stack;
 

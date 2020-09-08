@@ -35,7 +35,7 @@ package tree;//给定一个二叉树，判断其是否是一个有效的二叉�
 
 //leetcode submit region begin(Prohibit modification and deletion)
 
-import commont.TreeNode;
+import common.TreeNode;
 
 /**
  * Definition for a binary tree node.

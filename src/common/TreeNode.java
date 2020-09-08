@@ -1,4 +1,4 @@
-package commont;
+package common;
 
 /**
  * publicCreated by IntelliJ IDEA.
@@ -14,4 +14,6 @@ public class TreeNode {
     public TreeNode(int x) {
         val = x;
     }
+
+
 }

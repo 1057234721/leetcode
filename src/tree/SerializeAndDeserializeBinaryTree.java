@@ -26,11 +26,10 @@ package tree;//序列化是将一个数据结构或者对象转换为连续的�
 
 //leetcode submit region begin(Prohibit modification and deletion)
 
-import commont.TreeNode;
+import common.TreeNode;
 
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Definition for a binary tree node.

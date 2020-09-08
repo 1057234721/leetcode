@@ -19,7 +19,7 @@ package tree;//给定一个二叉树，返回它的 前序 遍历。
 
 //leetcode submit region begin(Prohibit modification and deletion)
 
-import commont.TreeNode;
+import common.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +31,8 @@ import java.util.Stack;
  *     int val;
  *     TreeNode left;
  *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ *     TreeNode(int x) { val = x; }+++++
+ *
  * }
  */
 /**

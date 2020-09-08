@@ -18,7 +18,7 @@ package tree;//给定一个二叉树，返回它的 后序 遍历。
 
 //leetcode submit region begin(Prohibit modification and deletion)
 
-import commont.TreeNode;
+import common.TreeNode;
 
 import java.util.LinkedList;
 import java.util.List;

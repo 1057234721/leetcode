@@ -30,7 +30,7 @@ package tree;//给定一个二叉树，找出其最小深度。
  * }
  */
 
-import commont.TreeNode;
+import common.TreeNode;
 
 /**
  * Created by IntelliJ IDEA.
