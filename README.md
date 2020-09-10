@@ -59,6 +59,30 @@ public void recur(int level, int param) {
 
   // restore current status 
   }
+  
+ 回溯算法 
+有撤销的操作，需要清扫当前层状；
+
+排列组合问题全集
+https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning)
+  
+
+好比说树的路径和
+
+这种问题
+明知道往下就没有解了
+那就在当前节点停止
+减少解空间
+回溯主要体现在减少解空间
+剪枝是减少无意义的步骤？
+
+剪枝是回溯的一步
+
+就是判断无路可走的那个转折点
+
+把当前路径下的可能解放弃
+
+转到其他的路径上
 
 
 

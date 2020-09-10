@@ -19,6 +19,8 @@ package recursion;//数字 n 代表生成括号的对数，请你设计一个函
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+
 /**
  * Created by IntelliJ IDEA.
  *[22]Generate Parentheses
@@ -36,6 +38,7 @@ class GenerateParentheses{
     }
     //回溯算法，递归过程中枚举若干种优化策略，若策略无效，退化为暴力
     //左括号小于n可插入，右括号小于左括号数量可插入
+    //如果使用StringBuffer要清理当前层状态；
     private void recursion(List<String> list,String  s,int start,int end ,int n){
         if(start == n && end == n){
             list.add(s.toString());
@@ -48,5 +51,10 @@ class GenerateParentheses{
             recursion(list,s+")",start,end+1,n);
         }
     }
+
+  public static void main(String[] args) {
+    // s
+    System.out.println(Integer.MIN_VALUE);
+  }
 }
 //leetcode submit region end(Prohibit modification and deletion)
