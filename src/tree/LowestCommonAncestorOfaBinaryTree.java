@@ -63,51 +63,77 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 class LowestCommonAncestorOfaBinaryTree {
-    public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        //找到root到p的路径，找到root到q的路径，转化为两链表的最近公共祖先
-        List<TreeNode> listP = BinaryTreeOnlyPaths(root,p.val);
-        List<TreeNode>  listQ =  BinaryTreeOnlyPaths(root, q.val);
-        int i = 0;
-        TreeNode node = root;
-        while (i< Math.min(listP.size(),listQ.size())){
-           if( listP.get(i).val == listQ.get(i).val){
-               node =  listP.get(i);
-           }else {
-               return node;
-           }
-           i++;
 
-
-        }
-        return node;
-    }
-
-    public static List<TreeNode> BinaryTreeOnlyPaths(TreeNode root, int q) {
-        //是节点q，当前路径末尾添加该节点，当前路径添加到结果
-        //不是节点q，当前路径末尾添加该节点
-        //要清扫当前层状态
-        List<TreeNode>  listTemp = new ArrayList<>();
-        List<TreeNode>  listResult = new ArrayList<>();
-        dfs(root,q,listTemp,listResult);
-        return listResult;
+        public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+            if(root == null){
+                return root;
+            }
+            if(root == p || root ==q){
+                return root;
+            }
+            TreeNode left =  lowestCommonAncestor(root.left,p,q);
+            TreeNode right =  lowestCommonAncestor(root.right,p,q);
+            //在左右子树，只在左子树，只在右子树
+            if(left != null && right != null){
+                return root;
+            }
+            if (left==null){
+                return  right;
+            }
+            if (right==null){
+                return  left;
+            }
+            return root;
 
     }
 
-    private static void dfs(TreeNode root, int q, List<TreeNode> listTemp, List<TreeNode> listResult) {
-        if(root == null){
-            return;
-        }
-        if(root.val == q ){
-            listTemp.add(root);
-            listResult.addAll(listTemp);
-        }
-        listTemp.add(root);
-        dfs(root.left,q,listTemp,listResult);
-        dfs(root.right,q,listTemp,listResult);
-        //恢复当前层状态
-        listTemp.remove(listTemp.size()-1);
-    }
 
+
+//    public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+//        //找到root到p的路径，找到root到q的路径，转化为两链表的最近公共祖先
+//        List<TreeNode> listP = BinaryTreeOnlyPaths(root,p.val);
+//        List<TreeNode>  listQ =  BinaryTreeOnlyPaths(root, q.val);
+//        int i = 0;
+//        TreeNode node = root;
+//        while (i< Math.min(listP.size(),listQ.size())){
+//           if( listP.get(i).val == listQ.get(i).val){
+//               node =  listP.get(i);
+//           }else {
+//               return node;
+//           }
+//           i++;
+//
+//
+//        }
+//        return node;
+//    }
+//
+//    public static List<TreeNode> BinaryTreeOnlyPaths(TreeNode root, int q) {
+//        //是节点q，当前路径末尾添加该节点，当前路径添加到结果
+//        //不是节点q，当前路径末尾添加该节点
+//        //要清扫当前层状态
+//        List<TreeNode>  listTemp = new ArrayList<>();
+//        List<TreeNode>  listResult = new ArrayList<>();
+//        dfs(root,q,listTemp,listResult);
+//        return listResult;
+//
+//    }
+//
+//    private static void dfs(TreeNode root, int q, List<TreeNode> listTemp, List<TreeNode> listResult) {
+//        if(root == null){
+//            return;
+//        }
+//        if(root.val == q ){
+//            listTemp.add(root);
+//            listResult.addAll(listTemp);
+//        }
+//        listTemp.add(root);
+//        dfs(root.left,q,listTemp,listResult);
+//        dfs(root.right,q,listTemp,listResult);
+//        //恢复当前层状态
+//        listTemp.remove(listTemp.size()-1);
+//    }
+//
 
     public static void main(String[] args) {
         //TreeNode

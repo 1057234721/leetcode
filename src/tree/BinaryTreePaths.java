@@ -66,5 +66,29 @@ class BinaryTreePaths {
 
 
     }
+
+    public List<String> binaryTreePaths2(TreeNode root) {
+        List<String> list = new ArrayList<>();
+        dfs(root, list, new StringBuffer());
+        return list;
+    }
+
+    private void dfs(TreeNode root, List<String> list, StringBuffer s) {
+        if (root == null) {
+            return;
+        }
+        int len = s.length();
+        s.append(root.val);
+        if (root.left == null && root.right == null) {
+            list.add(s.toString());
+            s.setLength(len);
+            return;
+        }
+        s.append("->");
+        dfs(root.left, list, s);
+        dfs(root.right, list, s);
+        s.setLength(len);
+    }
+
 }
 //leetcode submit region end(Prohibit modification and deletion)
