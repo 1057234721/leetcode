@@ -57,12 +57,12 @@ class BinaryTreeInorderTraversal{
 //    }
 
     public List<Integer> inorderTraversal(TreeNode root) {
-     //前序遍历用queue，中后续用stack，前序是bfs，中后序是dfs
         //1 遍历所有节点，不为空则入栈，后续遍历该结点下的左节点，为空则出栈
         //2 记录出栈元素值
         //3 将右节点作为根，重复1
         Stack<TreeNode> stack = new Stack<TreeNode>();
         List<Integer> list = new ArrayList<Integer>();
+        //根节点不为空要入栈，栈不为空要出栈
         while(!stack.empty() || root != null){
             while (root != null){
                 stack.push(root);
