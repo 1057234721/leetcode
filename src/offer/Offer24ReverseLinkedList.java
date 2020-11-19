@@ -1,4 +1,4 @@
-package link;//反转一个单链表。
+package offer;//反转一个单链表。
 //
 // 示例: 
 //
@@ -30,7 +30,7 @@ import common.ListNode;
  * Date: 20200907
  * To change this template use File | Settings | File Templates.
  */
-class ReverseLinkedList {
+class Offer24ReverseLinkedList {
     //    public ListNode reverseList(ListNode head) {
     //       //迭代，设前驱pre，当前节点cur，
     //        //缓存后继 tempNext
