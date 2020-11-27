@@ -30,7 +30,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 //leetcode submit region begin(Prohibit modification and deletion)
-class Permutations2 {
+class Offer38Permutation {
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> temp =  new ArrayList<>();
@@ -57,20 +57,20 @@ class Permutations2 {
             if( i>0 && nums[i] == nums[i-1] && !flags[i-1]){
                 continue;
             }
-                flags[i] = true;
-                temp.add(nums[i]);
-                dfs( nums,temp, result,flags);
-                temp.remove(temp.size()-1);
-                flags[i] = false;
+            flags[i] = true;
+            temp.add(nums[i]);
+            dfs( nums,temp, result,flags);
+            temp.remove(temp.size()-1);
+            flags[i] = false;
 
         }
     }
 
-  public static void main(String[] args) {
-    //
-      int[] a = {3,3,0,3};
-      List<List<Integer>> list = permute(a);
-    System.out.println(list);
-  }
+    public static void main(String[] args) {
+        //
+        int[] a = {3,3,0,3};
+        List<List<Integer>> list = permute(a);
+        System.out.println(list);
+    }
 }
 //leetcode submit region end(Prohibit modification and deletion)
